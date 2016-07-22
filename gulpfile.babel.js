@@ -3,6 +3,7 @@ import gulp from 'gulp';
 import connect from 'gulp-connect';
 import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
+import sass from 'gulp-sass';
 
 gulp.task('server',() => {
   connect.server({
@@ -28,7 +29,7 @@ gulp.task('sass',() => {
 
 gulp.task('watch',() => {
   gulp.watch(['./app/*.html'],['html']);
-  // gulp.watch(['./scss/*.scss'],['sass']);
+  gulp.watch(['./scss/*.scss'],['sass']);
 });
 
 gulp.task('default',['server','watch']);
