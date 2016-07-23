@@ -1,0 +1,61 @@
+/**
+* create by wanbao
+* 2016.7.23
+* 兼容IE7以上
+**/
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  *zoom: 1;
+}
+
+.input-group {
+  margin-bottom: 10px;
+  width: 245px;
+  position: relative;
+  label {
+    float: left;
+    font-size: 16px;
+    margin-top: 9px;
+  }
+  input {
+    float: right;
+    width: 192px;
+    height: 30px;
+    padding-left: 8px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    &:hover {
+      border: 1px solid #57B892;
+    }
+    &:focus{
+      outline:none;
+    }
+  }
+  i {
+    position: absolute;
+    display: inline-block;
+    right:-20px;
+    top: 10px;
+    font-size: 14px;
+    z-index:2;
+  }
+
+  .input-underscore{
+    border: none;
+    border-bottom: 1px solid #57B892;
+    &:hover{
+      border:none;
+      border-bottom: 1px solid #57B892;
+    }
+  }
+}
