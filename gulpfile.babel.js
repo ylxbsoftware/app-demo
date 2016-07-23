@@ -17,6 +17,11 @@ gulp.task('html', () => {
     .pipe(connect.reload());
 });
 
+gulp.task('js',()=>{
+  gulp.src('./js/*.js')
+  .pipe(connect.reload());
+});
+
 gulp.task('sass', () => {
   sass('./scss/*.scss', {
       sourcemap: true
@@ -34,6 +39,7 @@ gulp.task('sass', () => {
 gulp.task('watch', () => {
   gulp.watch(['./app/*.html'], ['html']);
   gulp.watch(['./scss/*.scss'], ['sass']);
+  gulp.watch(['./js/*.js'],['js']);
 });
 
 gulp.task('default', ['server', 'watch']);
