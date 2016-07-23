@@ -1,4 +1,12 @@
-$color = 'red';
-div{
-  color:red;
+$color:#f90;
+$basic-border:1px solid #ddd;
+
+div.wrapper{
+  color: $color;
+  article{
+    text-align:left;
+  }
+  aside{
+    font-weight:bold;
+  }
 }

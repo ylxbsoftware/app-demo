@@ -5,15 +5,17 @@
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <title>home</title>
-  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
 
 <body>
-  <div id="content">
+  <div id="content"></div>
+  <div class="wrapper">
+    <article>侧边内容</article>
+    <aside>侧边内容</aside>
   </div>
   <script>
-  ;
-  (function(window, undefined) {
+  ;(function(window, undefined) {
     'use strict';
     const get = function(id) {
       return document.getElementById(id);
@@ -39,8 +41,9 @@
       '红色': 'red'
     }
 
-    let defaultColor = '';
-    defaultColor in color ? get('content').style.color = color[defaultColor] : get('content').style.color = 'pink';
+    let defaultColor = '',
+      setColor = get('content').style.color;
+    defaultColor in color ? setColor = color[defaultColor] : setColor = 'pink';
     log(JSON.stringify(color));
 
   })(this);
