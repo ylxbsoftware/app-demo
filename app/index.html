@@ -4,50 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>home</title>
-  <link rel="stylesheet" type="text/css" href="../css/main.css">
+  <title>按钮</title>
+  <link rel="stylesheet" type="text/css" href="../css/btn.css">
 </head>
 
 <body>
-  <div id="content"></div>
   <div class="wrapper">
-    <article>侧边内容</article>
-    <aside>侧边内容</aside>
-  </div>
-  <script>
-  ;(function(window, undefined) {
-    'use strict';
-    const get = function(id) {
-      return document.getElementById(id);
-    }
-
-    const log = function(result) {
-      console.log('打印的结果为\n\t' + result) && false;
-    }
-
-    let i = 2;
-    let items = ['a', 'b', 'c'];
-    let result = items.map((a) => a + 'c');
-
-    let b = ['first'].concat(result); //添加到数组第一个
-    b[b.length] = 'wanbao'; //添加到数组最后一个
-
-    b.splice(b.length / 2, 0, 'middle'); //添加到数组中间
-
-    get('content').innerHTML = b;
-
-    const color = {
-      '黑色': 'black',
-      '红色': 'red'
-    }
-
-    let defaultColor = '',
-      setColor = get('content').style.color;
-    defaultColor in color ? setColor = color[defaultColor] : setColor = 'pink';
-    log(JSON.stringify(color));
-
-  })(this);
-  </script>
+    <a href="javascript:;" class="btn">默认</a>
+    <a href="javascript:;" class="btn success">成功</a>
+    <a href="javascript:;" class="btn error">失败</a>
+    <a href="javascript:;" class="btn waring">警告</a>
+    </div>
 </body>
 
 </html>

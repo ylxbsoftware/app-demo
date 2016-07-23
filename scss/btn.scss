@@ -1,0 +1,39 @@
+/**
+* create by wanbao
+* 2016.7.23
+* 可自定义设置宽度，高度，背景色和字体颜色的圆角按钮
+**/
+
+@mixin btn-default {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none
+}
+
+@mixin custom-option($width, $height, $bgColor, $color) {
+  width: $width;
+  height: $height;
+  line-height: $height;
+  background-color: $bgColor;
+  color: $color;
+}
+
+.btn {
+  @include btn-default;
+  @include custom-option(120px, 30px, #ddd, #fff);
+}
+
+.success {
+  @include custom-option(120px, 30px, #5cb85c, #fff);
+}
+
+.error {
+  @include custom-option(120px, 30px, #FE554D, #fff);
+}
+
+.waring {
+  @include custom-option(120px, 30px, #f0ad4e, #fff);
+}
