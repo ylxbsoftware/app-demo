@@ -2,11 +2,13 @@
 * create by wanbao
 * 2016.7.23
 * 可自定义设置宽度，高度，背景色和字体颜色的圆角按钮
+* 兼容IE7以上
 **/
 
 @mixin btn-default {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
   border-radius: 3px;
   display: inline-block;
   text-align: center;
