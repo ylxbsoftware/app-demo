@@ -5,7 +5,7 @@
     }
 
     const log = function(result) {
-      console.log('打印的结果为\n\t' + result) && false;
+      console.log(‘打印的结果为\n\t ${result}‘) && false; //字符串插值
     }
 
     let i = 2;

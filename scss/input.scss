@@ -3,7 +3,7 @@
 * 2016.7.23
 * 兼容IE7以上
 **/
-
+@import 'reset';
 .clearfix:before,
 .clearfix:after {
   content: "";
@@ -16,6 +16,10 @@
 
 .clearfix {
   *zoom: 1;
+}
+
+.wrapper{
+  margin:20px 20px;
 }
 
 .input-group {

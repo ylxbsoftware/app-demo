@@ -13,4 +13,4 @@ class Form {
 }
 
 let form = new Form('content');
-form.setFields('通过class实现赋值内容');
+form.setFields('通过form class实现赋值内容');

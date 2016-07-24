@@ -5,7 +5,8 @@
 * 兼容IE7以上
 **/
 
-@mixin btn-default {
+@import 'reset';
+.btn-default {
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
@@ -23,8 +24,12 @@
   color: $color;
 }
 
+.wrapper {
+  margin: 20px 20px;
+}
+
 .btn {
-  @include btn-default;
+  @extend .btn-default;
   @include custom-option(120px, 30px, #ddd, #fff);
 }
 
